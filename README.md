@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quantum Amplitude Amplification: The Algorithm Visualizer
 
-## Getting Started
+[**Launch the Interactive Experience**](https://quantumamplification.github.io/QuantumAmplitudeAmplification/)
 
-First, run the development server:
+## The Vision
+Most quantum algorithms are often treated as "black boxes" of complex linear algebra. This project strips away the abstraction. We provide a unified visual and mathematical language to simplify and understand the quantum algorithms.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This isn't just a search visualizer; it is a platform for decomposing complex quantum speedups into intuitive geometric rotations.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Simplifying the Blackbox
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository provides interactive walkthroughs and visual logic for the most critical advancements in amplitude amplification:
 
-## Learn More
+* **Grover's Algorithm (1996):** The exponential search method that started it all.
+* **Fixed-Point Amplitude Amplification (2014):** Solving the "over-magnification" problem when the number of target states is unknown.
+* **Oblivious Amplitude Amplification (2014):** Amplifying success probabilities without needing to know the internal workings of the subroutine.
+* **Variable Time Amplitude Amplification (2010):** Optimizing compute time by extracting fast processes early.
+* **Distributed Quantum Amplitude Amplification (2025):** Scaling across multiple quantum processors to overcome modern hardware limits.
+* **Quantum Singular Value Transformation (2018):** The "ultimate masterkey" that unifies nearly all known quantum algorithms into one elegant mathematical framework.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Features
+* **Unified Geometric Interface:** See how different SOTA algorithms map onto the same geometric rotation principles.
+* **Interactive State Manipulation:** Adjust qubit counts and oracle parameters to see the immediate impact on the Hilbert space.
+* **Step-by-Step Deconstruction:** Break down complex algorithms into individual gate applications and reflections.
+* **Real-time Probability Mapping:** Watch the "Mean" shift as the diffusion operator acts on the system.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
