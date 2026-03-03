@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-glow-cyan: var(--glow-cyan);
+  --color-glow-violet: var(--glow-violet);
+  --color-glow-amber: var(--glow-amber);
+  --color-glow-gray: var(--glow-gray);
+  --color-primary-glow: var(--primary-glow);
+  --color-axis: var(--axis-color);
+  
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  
+  /* Solar Flares Theme */
+  --glow-amber: #FFB000;
+  --glow-gray: rgba(0,0,0,0.1);
+  --primary-glow: var(--glow-amber);
+  --axis-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  /* Deep Space Theme */
+  --background: #000000;
+  --foreground: #ffffff;
+  
+  --glow-cyan: #00F0FF;
+  --glow-violet: #8A2BE2;
+  --primary-glow: var(--glow-cyan);
+  --axis-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.8s ease;
+}
+
+/* Base custom glow effects for reuse */
+.drop-shadow-cyan {
+  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.6)) drop-shadow(0 0 20px rgba(0, 240, 255, 0.3));
+}
+
+.drop-shadow-amber {
+  filter: drop-shadow(0 0 10px rgba(255, 176, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 176, 0, 0.2));
+}
+
+.drop-shadow-violet {
+  filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.6)) drop-shadow(0 0 20px rgba(138, 43, 226, 0.3));
+}
