@@ -22,7 +22,7 @@ This repository provides interactive walkthroughs and visual logic for the most 
 
 ---
 
-## 🛠️ Features
+## Features
 * **Unified Geometric Interface:** See how different SOTA algorithms map onto the same geometric rotation principles.
 * **Interactive State Manipulation:** Adjust qubit counts and oracle parameters to see the immediate impact on the Hilbert space.
 * **Step-by-Step Deconstruction:** Break down complex algorithms into individual gate applications and reflections.
