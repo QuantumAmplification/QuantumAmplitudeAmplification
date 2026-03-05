@@ -97,6 +97,12 @@ export default function Home() {
               href="/oblivious"
             />
             <AlgorithmCard
+              title="Fixed-Point Oblivious Amplitude Amplification (2022)"
+              desc="Merging fixed-point damping with oblivious amplification to hit a target state without overshooting, maintaining optimal quantum speedup."
+              href="/foqa"
+            />
+
+            <AlgorithmCard
               title="Variable Time Amplitude Amplification (2010)"
               desc="Escaping the worst-case tax. Extracting fast processes early to save massive amounts of compute time."
               href="/vtaa"
