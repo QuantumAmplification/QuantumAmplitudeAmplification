@@ -37,7 +37,7 @@ export function FOQAPedagogicalPanel({ step, setStep }: { step: number, setStep:
             equation: "U = \\begin{pmatrix} \\text{Damped Op} & \\dots \\\\ \\dots & \\dots \\end{pmatrix}"
         },
         {
-            title: "4. The Circuit Design: LCU & $R_y$",
+            title: <>4. The Circuit Design: LCU &amp; <InlineMath math="R_y" /></>,
             text: (
                 <>
                     To physically build this expanded unitary matrix, the paper uses a <strong>Linear Combination of Unitaries (LCU)</strong>. The brilliant part is its high efficiency: it requires only one extra <strong>ancilla qubit</strong>. To control the exact amount of "friction," the circuit applies an <InlineMath math="R_y" /> gate to that single ancilla.
