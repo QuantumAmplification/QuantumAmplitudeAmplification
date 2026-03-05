@@ -18,7 +18,7 @@ export function QSVTModule() {
                     <h1 className="text-4xl md:text-5xl font-light tracking-tight">Quantum Singular Value Transformation</h1>
                 </div>
                 <p className="text-foreground/60 max-w-2xl">
-                    The Grand Unification of Quantum Algorithms. Reframing quantum design from confusing geometric rotations into clean, polynomial functional calculus on matrices.
+                    The Grand Unification of Quantum Algorithms. A surprisingly simple way to build almost any quantum program by taking a matrix and applying a mathematical function to it.
                 </p>
 
                 {step === 4 && (

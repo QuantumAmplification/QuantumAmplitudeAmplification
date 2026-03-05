@@ -8,57 +8,58 @@ import { GlossaryTerm } from "../GlossaryTerm";
 export function QSVTPedagogicalPanel({ step, setStep }: { step: number, setStep: (s: number) => void }) {
     const STEPS = [
         {
-            title: "The Core Paradigm Shift",
+            title: "1. The Big Idea: Functions on Matrices",
             text: (
                 <>
-                    Prior to QSVT, quantum algorithms relied on incredibly diverse physical intuitions like geometric rotations (Grover) or explicit eigenvalue extraction via <GlossaryTerm term="Quantum Phase Estimation (QPE)" id="qpe" />. QSVT completely replaces these with <strong>Functional Calculus on Matrices</strong>. Nearly every quantum speedup can be viewed as applying a scalar function <InlineMath math="f" /> to the spectrum of a matrix <InlineMath math="A" />. Designing an algorithm reduces to the simple classical task of finding a polynomial <InlineMath math="P(x)" /> that approximates the target function.
+                    Imagine you have a grid of numbers (a matrix) representing your problem. What if you could just apply a mathematical function—like squaring it, finding its inverse, or stepping it—directly to that matrix? QSVT does exactly this. It replaces dozens of confusing, custom quantum algorithms with one simple framework that just applies a polynomial function to your data.
                 </>
             ),
-            example: "In-Situ Transformation: Unlike QPE, which writes eigenvalues into a separate digital register, QSVT transforms the singular values directly within the amplitudes of the original state without needing large ancillary storage.",
-            equation: "\\sigma_i \\to P(\\sigma_i) \\approx f(\\sigma_i)"
+            example: "Instead of building a specific quantum circuit to solve a specific problem, we just find a polynomial equation that matches the function we want to apply.",
+            equation: "\\text{Data } A \\xrightarrow{\\text{ QSVT }} \\text{Result } f(A)"
         },
         {
-            title: "Structural Building Blocks",
+            title: "2. The Quantum Trick: Block Encoding",
             text: (
                 <>
-                    QSVT operates through two components. First is <strong><GlossaryTerm term="Block-Encoding" id="block-encoding" /></strong>: To manipulate a non-unitary matrix <InlineMath math="A" /> on a quantum computer, it&apos;s embedded into the top-left corner of a larger unitary <InlineMath math="U" />. Second is <strong><GlossaryTerm term="Quantum Signal Processing (QSP)" id="qsp" /></strong>: A single-qubit engine that interleaves a &quot;signal&quot; rotation with &quot;processor&quot; rotations to synthesize bounded polynomial transformations.
+                    There's a catch: Quantum computers can only run &quot;Unitary&quot; operations (rotations that preserve all information). But our data matrix <InlineMath math="A" /> usually isn't Unitary. The solution is remarkably clever: we just take a larger Unitary matrix and hide our data matrix inside its top-left corner! This is called a <strong><GlossaryTerm term="Block-Encoding" id="block-encoding" /></strong>.
                 </>
             ),
-            example: "Quantum Data Ingestion: Mixed states, POVMs, and sparse classical matrices can all be transformed into block-encodings, allowing complex operator arithmetic via Linear Combinations of Unitaries (LCU).",
-            equation: "U = \\begin{pmatrix} A/\\alpha & \\cdot \\\\ \\cdot & \\cdot \\end{pmatrix}"
+            example: "It's like wrapping a fragile package (our non-unitary data) in a larger, sturdy box (a unitary matrix) so the quantum computer can safely process it.",
+            equation: "U = \\begin{pmatrix} A/\\alpha & \\text{Garbage} \\\\ \\text{Garbage} & \\text{Garbage} \\end{pmatrix}"
         },
         {
-            title: "The Main QSVT Theorem",
+            title: "3. Processing the Signal",
             text: (
                 <>
-                    The framework elevates <GlossaryTerm term="QSP" id="qsp" /> to large Hilbert spaces. A <GlossaryTerm term="block-encoding" id="block-encoding" /> <InlineMath math="U" /> decomposes the entire space into independent two-dimensional invariant subspaces, one for each singular value <InlineMath math="\sigma_i" />. By alternating applications of <InlineMath math="U" />, <InlineMath math="U^\dagger" />, and multi-qubit reflections <InlineMath math="R_\phi" />, the QSP polynomial logic is applied in parallel to every singular value simultaneously.
+                    Now that our data is inside a quantum operation, how do we apply our function? We &quot;sandwich&quot; our block-encoded data between special, tunable quantum rotations called the <strong><GlossaryTerm term="Quantum Signal Processor (QSP)" id="qsp" /></strong>. By carefully choosing the angles for these rotations, we can mathematically sculpt the final output into almost any shape we want!
                 </>
             ),
-            example: "Parity Rules: Odd-degree polynomials map right singular vectors to left singular vectors; even-degree polynomials stay entirely within the original space.",
-            equation: "U_{QSVT} = \\prod (R_{\\phi_k} U) (R_{\\phi_{k-1}} U^\\dagger) \\dots"
+            example: "Think of it like an equalizer on a stereo. The block-encoding is the raw audio signal, and the alternating rotations are the knobs we turn to boost or cut specific frequencies.",
+            equation: "\\text{Output} = \\text{Rotate} \\to \\text{Apply } U \\to \\text{Rotate} \\to \\text{Apply } U^\\dagger \\dots"
         },
         {
-            title: "The Algorithm Zoo Unified",
+            title: "4. One Algorithm to Rule Them All",
             text: (
                 <>
-                    QSVT provides a single, unified method to construct optimal circuits for foundational tasks. <br /><br />
-                    • <strong>Search</strong> approximates the sign function (<InlineMath math="sgn(x)" />). <br />
-                    • <strong>Hamiltonian Sim</strong> maps <InlineMath math="e^{-ixt}" /> using Jacobi-Anger expansions. <br />
-                    • <strong>Matrix Inversion (HHL)</strong> approximates <InlineMath math="1/x" /> on a gapped interval.
+                    This single framework can replicate almost every major quantum algorithm. You just change the &quot;shape&quot; of the function you are applying!
+                    <br /><br />
+                    • <strong>Grover's Search</strong> is just applying a function shaped like a step. <br />
+                    • <strong>Quantum Simulation</strong> is applying a wave-like (sine/cosine) function. <br />
+                    • <strong>Solving Linear Equations (HHL)</strong> is applying an inverse (<InlineMath math="1/x" />) function.
                 </>
             ),
-            example: "Quantum Walks: Finding hitting times or spectral gaps is reframed merely as detecting the singular value 1 using a thresholding polynomial.",
-            equation: "P(x) \\approx \\begin{cases} sgn(x), & \\text{Search} \\\\ e^{-ixt}, & \\text{Simulation} \\\\ 1/x, & \\text{Inversion} \\end{cases}"
+            example: "QSVT proves that most quantum algorithms aren't fundamentally different; they are just different polynomials plugged into the exact same machinery.",
+            equation: "f(x) \\approx \\begin{cases} sgn(x), & \\text{Search} \\\\ e^{-ixt}, & \\text{Simulation} \\\\ 1/x, & \\text{Inversion} \\end{cases}"
         },
         {
-            title: "Architectural Optimality",
+            title: "5. The Ultimate Limit",
             text: (
                 <>
-                    QSVT represents the pinnacle of current algorithm design. It provides massive <strong>Spatial Efficiency</strong>, requiring only <InlineMath math="\mathcal{O}(1)" /> ancilla qubits (compared to the <InlineMath math="\mathcal{O}(\log 1/\epsilon)" /> required by <GlossaryTerm term="QPE" id="qpe" />). It achieves <strong>Temporal Optimality</strong> with linear scaling in time and logarithmic scaling in precision, saturating the absolute information-theoretic bounds derived from Markov&apos;s inequality.
+                    Not only is QSVT elegant, but it is also mathematically optimal. It achieves the absolute best possible performance allowed by the laws of physics, and it does so using very little extra quantum memory (ancilla qubits). It represents the absolute pinnacle of current algorithm design.
                 </>
             ),
-            example: "The Bottleneck (The Input Problem): While the transformation is optimal, constructing the initial block-encoding for dense classical data remains the primary challenge in the field.",
-            equation: "\\text{Cost} = \\mathcal{O} \\left( t + \\log \\frac{1}{\\epsilon} \\right)"
+            example: "The real challenge now isn't inventing new algorithms, but figuring out how to efficiently load our classical data into the initial Block-Encoding.",
+            equation: "\\text{Extra Qubits Required} = \\mathcal{O}(1)"
         }
     ];
 
