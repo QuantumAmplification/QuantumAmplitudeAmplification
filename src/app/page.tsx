@@ -2,6 +2,8 @@
 
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
+import { InlineMath } from "react-katex";
+import "katex/dist/katex.min.css";
 import { ArrowRight, Search, Target, CheckCircle2 } from "lucide-react";
 import { GlossaryTerm } from "@/components/GlossaryTerm";
 
@@ -113,14 +115,19 @@ export default function Home() {
             />
 
             <AlgorithmCard
-              title="Variable Time Amplitude Amplification (2010)"
-              desc="Escaping the worst-case tax. Extracting fast processes early to save massive amounts of compute time."
-              href="/vtaa"
+              title="CQAA (2017)"
+              desc="Controlled Amplitude Amplification. Transforming detection into finding with constant overlap physics."
+              href="/cqaa"
             />
             <AlgorithmCard
               title="Distributed Quantum Amplitude Amplification (2025)"
-              desc="Redistributing the heavy workload of amplitude amplification across multiple smaller quantum processors to overcome hardware limits."
+              desc="Redistributing the heavy workload of amplitude amplification across multiple smaller quantum processors."
               href="/dqaa"
+            />
+            <AlgorithmCard
+              title="DEQAAA (2026)"
+              desc="The two-phase exact distributed masterkey. Achieving 100% success across a multi-node quantum network."
+              href="/deqaaa"
             />
             <AlgorithmCard
               title="Quantum Singular Value Transformation (2018)"
@@ -131,7 +138,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Comparison Table Section */}
+      <section className="w-full bg-background py-24 border-t border-foreground/5">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16 text-center">
+            <h2 className="text-xs uppercase tracking-[0.2em] font-semibold opacity-50 mb-4">Benchmark Comparison</h2>
+            <h3 className="text-3xl font-light italic font-serif">Survey Table VI: Performance Metrics</h3>
+          </div>
+
+          <div className="overflow-x-auto rounded-3xl border border-foreground/10 bg-foreground/[0.01] backdrop-blur-sm">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-foreground/10 bg-foreground/[0.02]">
+                  <th className="p-6 text-xs uppercase tracking-widest font-semibold opacity-60">Framework</th>
+                  <th className="p-6 text-xs uppercase tracking-widest font-semibold opacity-60">Overshoot?</th>
+                  <th className="p-6 text-xs uppercase tracking-widest font-semibold opacity-60">Requires Exact p?</th>
+                  <th className="p-6 text-xs uppercase tracking-widest font-semibold opacity-60">Query Complexity</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm font-light">
+                <ComparisonRow name="Standard Grover" overshoot="Yes" exact="Yes" complexity="\mathcal{O}(1/\sqrt{p})" />
+                <ComparisonRow name="Fixed-Point AA" overshoot="No" exact="No" complexity="\mathcal{O}(\frac{1}{\sqrt{p}} \log \frac{2}{\delta})" />
+                <ComparisonRow name="Oblivious AA" overshoot="Yes" exact="Yes" complexity="\mathcal{O}(1/\sqrt{p})" />
+                <ComparisonRow name="Exact AA" overshoot="No" exact="Yes" complexity="Exact k \text{ steps}" />
+                <ComparisonRow name="DEQAAA" overshoot="No" exact="Yes" complexity="\text{Two-Phase Global Exact}" />
+                <ComparisonRow name="Variable-Time AA" overshoot="No" exact="No" complexity="\mathcal{O}(\frac{1}{\sqrt{p}} \sqrt{\sum p_j T_j^2})" />
+                <ComparisonRow name="QSVT" overshoot="No" exact="No" complexity="\mathcal{O}(\frac{1}{\sqrt{p}} \log \frac{1}{\epsilon})" />
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full py-10 text-center opacity-20 text-[10px] uppercase tracking-[0.3em] font-light">
+        © 2026 Quantum Amplitude Amplification Survey Project
+      </footer>
     </div>
+  );
+}
+
+function ComparisonRow({ name, overshoot, exact, complexity }: { name: string, overshoot: string, exact: string, complexity: string }) {
+  const isGood = overshoot === "No";
+  return (
+    <tr className="border-b border-foreground/5 hover:bg-foreground/[0.02] transition-colors">
+      <td className="p-6 font-medium text-foreground/90">{name}</td>
+      <td className={`p-6 ${isGood ? 'text-primary-glow font-medium' : 'text-red-500/60'}`}>{overshoot}</td>
+      <td className="p-6 text-foreground/60">{exact}</td>
+      <td className="p-6 text-foreground/80 font-mono">
+        <InlineMath math={complexity} />
+      </td>
+    </tr>
   );
 }
 

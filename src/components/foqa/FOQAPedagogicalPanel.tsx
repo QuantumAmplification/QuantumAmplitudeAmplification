@@ -55,6 +55,16 @@ export function FOQAPedagogicalPanel({ step, setStep }: { step: number, setStep:
             ),
             example: "It still requires only O(√N) queries to the quantum oracle to find the target state in a search space of size N, while guaranteeing we never overshoot the target.",
             equation: "\\text{Complexity} = \\mathcal{O}(\\sqrt{N})"
+        },
+        {
+            title: "6. The Damping Schedule",
+            text: (
+                <>
+                    FOQA introduces a precisely calculated <strong>damping schedule</strong>. Unlike standard AA which oscillates sinusoidally ($P_L(p)$), FOQA's use of LCU damping ($q_n$) ensures that failure probability is nonincreasing. The state "locks in" as it reaches the target.
+                </>
+            ),
+            example: "Compare the curves: The standard wave is like a pendulum that overswings. The monotone curve is like a shock absorber that settles perfectly on the target line.",
+            equation: "q_n = \\prod_{k=1}^n (1 - p_k) \\to 0"
         }
     ];
 

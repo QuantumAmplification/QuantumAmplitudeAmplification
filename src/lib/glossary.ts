@@ -138,7 +138,6 @@ export const GLOSSARY_TERMS = [
         id: "phase-kickback",
         term: "Phase Kickback",
         definition: "A quantum programming trick where applying an operation to a target qubit causes a phase shift that 'kicks back' to the control qubit, essentially tagging the state."
-    }
     },
     {
         id: "ae",
@@ -159,5 +158,25 @@ export const GLOSSARY_TERMS = [
         id: "qpe",
         term: "Quantum Phase Estimation",
         definition: "The 'readout' mechanism. It takes a rotating quantum state and, like a high-speed camera capturing a wheel's rotation, converts that motion into a readable number."
+    },
+    {
+        id: "local-exact",
+        term: "Local Exact Amplification (EQ_j)",
+        definition: "The first phase of DEQAAA. Each independent quantum node performs a precise, tuned rotation to hit its local target with zero error before the global step begins."
+    },
+    {
+        id: "global-exact",
+        term: "Global Exact Step (EQ-hat)",
+        definition: "The final 'stitching' step in DEQAAA. It applies a global phase shift across all nodes to correct any remaining misalignment, ensuring the total system success probability is exactly 1.0."
+    },
+    {
+        id: "lcu-damping",
+        term: "LCU Failure Reduction",
+        definition: "A technique used in FOQA to ensure that success probability never 'backslides'. Unlike the oscillatory nature of Grover, LCU handles failure using a monotone schedule, making it highly robust."
+    },
+    {
+        id: "cqaa-overlap",
+        term: "Constant Overlap State",
+        definition: "The core physics of CQAA. It uses a controlled circuit to ensure that the marked state maintains a constant, non-vanishing overlap with the principal eigenvector, enabling faster finding in sparse graphs."
     }
 ];
