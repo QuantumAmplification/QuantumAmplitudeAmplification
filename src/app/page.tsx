@@ -87,9 +87,19 @@ export default function Home() {
               href="/grover"
             />
             <AlgorithmCard
+              title="Exact Amplitude Amplification (2000)"
+              desc="Hitting the bullseye every time. Modifying the phase flip to guarantee a 100% success rate without overshooting."
+              href="/eqaa"
+            />
+            <AlgorithmCard
               title="Fixed-Point Amplitude Amplification (2014)"
               desc="What if we don't know exactly how many Good pieces there are? FPAA stops over-magnifying."
               href="/fpaa"
+            />
+            <AlgorithmCard
+              title="Amplitude Estimation (2000)"
+              desc="Turning search into a measurement. Using AA to estimate exactly how many good pieces are in the haystack."
+              href="/ae"
             />
             <AlgorithmCard
               title="Oblivious Amplitude Amplification (2014)"

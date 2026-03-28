@@ -139,4 +139,25 @@ export const GLOSSARY_TERMS = [
         term: "Phase Kickback",
         definition: "A quantum programming trick where applying an operation to a target qubit causes a phase shift that 'kicks back' to the control qubit, essentially tagging the state."
     }
+    },
+    {
+        id: "ae",
+        term: "Amplitude Estimation (AE)",
+        definition: "A core quantum algorithm that estimates the success probability of a process. It uses Amplitude Amplification to 'boost' the signal and then extracts the value into a digital register using Phase Estimation."
+    },
+    {
+        id: "eqaa",
+        term: "Exact Quantum Amplitude Amplification (EQAA)",
+        definition: "A precise variant of AA that modifies the phase flip angle (instead of a static 180°). If the initial success probability is known, it can be tuned to hit exactly 100% success in one or more rotations."
+    },
+    {
+        id: "phase-register",
+        term: "Phase Register",
+        definition: "A set of ancillary qubits used in Amplitude Estimation to store the binary representation of the phase. Think of it as a digital dial that shows the exact 'angle' of the quantum state."
+    },
+    {
+        id: "qpe",
+        term: "Quantum Phase Estimation",
+        definition: "The 'readout' mechanism. It takes a rotating quantum state and, like a high-speed camera capturing a wheel's rotation, converts that motion into a readable number."
+    }
 ];
