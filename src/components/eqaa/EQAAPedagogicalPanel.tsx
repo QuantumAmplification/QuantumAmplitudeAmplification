@@ -34,7 +34,11 @@ export function EQAAPedagogicalPanel({ step, setStep }: { step: number, setStep:
                     By calculating the phase <InlineMath math="\phi" /> based on the initial state, we can guarantee a <strong>100% success probability</strong>. The vector doesn't just get close—it aligns perfectly with the vertical axis. We no longer need to worry about 'over-baking' the quantum state.
                 </>
             ),
-            example: "Result: A mathematical guarantee. If you run the algorithm exactly <InlineMath math="k" /> times with phase <InlineMath math="\phi" />, you will find the answer every single time.",
+            example: (
+                <>
+                    Result: A mathematical guarantee. If you run the algorithm exactly <InlineMath math="k" /> times with phase <InlineMath math="\phi" />, you will find the answer every single time.
+                </>
+            ),
             equation: "P_{success} \\equiv 1.0"
         },
         {
