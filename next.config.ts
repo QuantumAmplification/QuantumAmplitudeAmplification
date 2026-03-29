@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig = {
-  output: 'export', // This is the crucial line
+  output: 'export',
+  basePath: '/QuantumAmplitudeAmplification',
   images: {
-    unoptimized: true, // Needed for static export
+    unoptimized: true,
   },
 };
 

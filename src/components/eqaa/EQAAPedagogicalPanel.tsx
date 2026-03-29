@@ -14,7 +14,11 @@ export function EQAAPedagogicalPanel({ step, setStep }: { step: number, setStep:
                     In standard Grover's algorithm, each rotation is a fixed size (usually 180° flips). Because of this, the vector often skips <em>over</em> the perfect 90° target, like a car that can only move in 10-meter increments trying to park exactly on a line. This leads to the <GlossaryTerm term="Soufflé Problem" id="souffle-problem" />.
                 </>
             ),
-            example: "Analogy: Imagine a clock that only has an hour hand. You can't point to exactly 3:30; you'll always be slightly before or after it.",
+            example: (
+                <>
+                    Analogy: Imagine a clock that only has an hour hand. You can't point to exactly 3:30; you'll always be slightly before or after it.
+                </>
+            ),
             equation: "P_{success} = \\sin^2((2k+1)\\theta) < 1.0"
         },
         {
@@ -24,7 +28,11 @@ export function EQAAPedagogicalPanel({ step, setStep }: { step: number, setStep:
                     <GlossaryTerm term="Exact Quantum Amplitude Amplification (EQAA)" id="eqaa" /> fixes this by changing the <strong>size</strong> of the final rotation. Instead of a hard 180° flip, we use a specifically tuned angle <InlineMath math="\phi" />. This acts like a steering wheel that can make tiny, precise adjustments as we approach the target.
                 </>
             ),
-            example: "Real Life: It's the difference between a light switch (On/Off) and a dimmer switch. We can dim the final rotation to land exactly where we want.",
+            example: (
+                <>
+                    Real Life: It's the difference between a light switch (On/Off) and a dimmer switch. We can dim the final rotation to land exactly where we want.
+                </>
+            ),
             equation: "\\phi = 2 \\arcsin\\left(\\frac{1}{\\sin((2k+1)\\theta)}\\right)"
         },
         {
@@ -48,7 +56,11 @@ export function EQAAPedagogicalPanel({ step, setStep }: { step: number, setStep:
                     EQAA is just as fast as Grover's algorithm but provides much higher reliability for specific tasks like quantum cryptography or exact search. It shows that quantum algorithms can be both fast <em>and</em> perfectly precise if we control the phases with enough care.
                 </>
             ),
-            example: "Conclusion: We've upgraded from a 'high-probability' tool to a 'deterministic' solution, all by refining our control over quantum interference.",
+            example: (
+                <>
+                    Conclusion: We've upgraded from a 'high-probability' tool to a 'deterministic' solution, all by refining our control over quantum interference.
+                </>
+            ),
             equation: "N_{steps} \\approx \\frac{\\pi}{4\\theta}"
         }
     ];
