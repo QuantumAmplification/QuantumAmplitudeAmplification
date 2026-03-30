@@ -176,15 +176,33 @@ export default function Home() {
         <div className="opacity-50 space-y-2">
           <p className="font-semibold">Authors</p>
           <p className="flex flex-wrap justify-center gap-2 items-center">
-            <a href="mailto:mithilesh.kumar@krea.edu.in" className="hover:text-primary-glow transition-colors cursor-pointer">
+            <a
+              href="mailto:mithilesh.kumar@krea.edu.in"
+              target="_self"
+              aria-label="Email Mithilesh Kumar"
+              title="Email Mithilesh Kumar"
+              className="hover:text-primary-glow transition-colors cursor-pointer"
+            >
               Mithilesh Kumar
             </a>
             <span className="text-foreground/30">•</span>
-            <a href="mailto:varun_daiya.sias25@krea.ac.in" className="hover:text-primary-glow transition-colors cursor-pointer">
+            <a
+              href="mailto:varun_daiya.sias25@krea.ac.in"
+              target="_self"
+              aria-label="Email Varun Daiya"
+              title="Email Varun Daiya"
+              className="hover:text-primary-glow transition-colors cursor-pointer"
+            >
               Varun Daiya
             </a>
             <span className="text-foreground/30">•</span>
-            <a href="mailto:yusuf_tahir.sias25@krea.ac.in" className="hover:text-primary-glow transition-colors cursor-pointer">
+            <a
+              href="mailto:yusuf_tahir.sias25@krea.ac.in"
+              target="_self"
+              aria-label="Email Yusuf Tahir"
+              title="Email Yusuf Tahir"
+              className="hover:text-primary-glow transition-colors cursor-pointer"
+            >
               Yusuf Tahir
             </a>
           </p>
