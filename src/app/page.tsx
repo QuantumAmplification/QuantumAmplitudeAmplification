@@ -171,8 +171,24 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-10 text-center opacity-20 text-[10px] uppercase tracking-[0.3em] font-light">
-        © 2026 Quantum Amplitude Amplification Survey Project
+      <footer className="w-full py-16 text-center text-[10px] uppercase tracking-[0.3em] font-light border-t border-foreground/5">
+        <p className="opacity-40 mb-6">© 2026 Quantum Amplitude Amplification Survey Project</p>
+        <div className="opacity-50 space-y-2">
+          <p className="font-semibold">Authors</p>
+          <p className="flex flex-wrap justify-center gap-2 items-center">
+            <a href="mailto:mithilesh.kumar@krea.edu.in" className="hover:text-primary-glow transition-colors cursor-pointer">
+              Mithilesh Kumar
+            </a>
+            <span className="text-foreground/30">•</span>
+            <a href="mailto:varun_daiya.sias25@krea.ac.in" className="hover:text-primary-glow transition-colors cursor-pointer">
+              Varun Daiya
+            </a>
+            <span className="text-foreground/30">•</span>
+            <a href="mailto:yusuf_tahir.sias25@krea.ac.in" className="hover:text-primary-glow transition-colors cursor-pointer">
+              Yusuf Tahir
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   );
