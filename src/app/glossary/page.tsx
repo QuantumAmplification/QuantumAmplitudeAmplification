@@ -1,6 +1,7 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 import { ArrowLeft, BookOpen } from "lucide-react";
+import { ResourceLinks } from "@/components/ResourceLinks";
 
 const TERMS = [
     {
@@ -48,7 +49,10 @@ export default function GlossaryPage() {
                         <h2 className="text-xs uppercase tracking-[0.2em] opacity-40 mt-1">Glossary</h2>
                     </div>
                 </div>
-                <ThemeToggle />
+                <div className="flex items-center gap-6">
+                    <ResourceLinks />
+                    <ThemeToggle />
+                </div>
             </header>
 
             <main className="flex-1 w-full max-w-4xl mx-auto min-h-screen pt-40 pb-20 px-6">

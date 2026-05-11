@@ -2,7 +2,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { OAAModule } from "@/components/oblivious/OAAModule";
-import { DetailedSurveyLink } from "@/components/DetailedSurveyLink";
+import { ResourceLinks } from "@/components/ResourceLinks";
 
 export default function ObliviousPage() {
     return (
@@ -18,7 +18,7 @@ export default function ObliviousPage() {
                     </Link>
                 </div>
                 <div className="flex items-center gap-6">
-                    <DetailedSurveyLink />
+                    <ResourceLinks />
                     <ThemeToggle />
                 </div>
             </header>

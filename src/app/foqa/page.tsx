@@ -1,7 +1,7 @@
 import { FOQAModule } from "@/components/foqa/FOQAModule";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { DetailedSurveyLink } from "@/components/DetailedSurveyLink";
+import { ResourceLinks } from "@/components/ResourceLinks";
 
 export default function FOQAPage() {
     return (
@@ -23,7 +23,7 @@ export default function FOQAPage() {
                 </div>
 
                 <div className="flex items-center gap-6">
-                    <DetailedSurveyLink />
+                    <ResourceLinks />
                 </div>
             </header>
 

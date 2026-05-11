@@ -3,7 +3,7 @@
 import { DEQAAModule } from "@/components/deqaaa/DEQAAModule";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { DetailedSurveyLink } from "@/components/DetailedSurveyLink";
+import { ResourceLinks } from "@/components/ResourceLinks";
 
 export default function DEQAAAPage() {
     return (
@@ -17,8 +17,8 @@ export default function DEQAAAPage() {
                     <span className="text-xs uppercase tracking-widest font-semibold opacity-70">Back to Landing</span>
                 </Link>
             </div>
-            <div className="fixed top-8 right-8 md:top-12 md:right-12 z-50">
-                <DetailedSurveyLink />
+            <div className="fixed top-8 right-8 md:top-12 md:right-12 z-50 flex items-center gap-6">
+                <ResourceLinks />
             </div>
 
             <DEQAAModule />
