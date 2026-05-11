@@ -244,6 +244,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: "/QuantumAmplitudeAmplification",
+  trailingSlash: true,
   turbopack: {
     root: __dirname,
   },
@@ -256,6 +257,8 @@ export default nextConfig;
 ```
 
 The app avoids build-time font downloads, which keeps CI and GitHub Pages builds more reliable. Turbopack root inference is pinned in `next.config.ts` so the build resolves this repository as the project root even if parent directories contain other lockfiles.
+
+GitHub Pages deployment is handled by `.github/workflows/deploy-pages.yml`. The workflow installs dependencies with `npm ci`, runs `npm run build`, preserves `.nojekyll`, uploads the generated `out/` directory, and deploys it through the official Pages artifact flow.
 
 ---
 
