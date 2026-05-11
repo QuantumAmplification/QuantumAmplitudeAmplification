@@ -2,6 +2,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { EQAAModule } from "@/components/eqaa/EQAAModule";
+import { DetailedSurveyLink } from "@/components/DetailedSurveyLink";
 
 export default function EQAAPage() {
     return (
@@ -17,6 +18,7 @@ export default function EQAAPage() {
                     </Link>
                 </div>
                 <div className="flex items-center gap-6">
+                    <DetailedSurveyLink />
                     <ThemeToggle />
                 </div>
             </header>

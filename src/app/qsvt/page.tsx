@@ -2,6 +2,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { QSVTModule } from "@/components/qsvt/QSVTModule";
+import { DetailedSurveyLink } from "@/components/DetailedSurveyLink";
 
 export default function QSVTPage() {
     return (
@@ -17,9 +18,7 @@ export default function QSVTPage() {
                     </Link>
                 </div>
                 <div className="flex items-center gap-6">
-                    <Link href="#" className="hidden md:flex text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity font-semibold border border-foreground/10 px-4 py-2 rounded-full hover:bg-foreground/5">
-                        Read Detailed Survey
-                    </Link>
+                    <DetailedSurveyLink />
                     <ThemeToggle />
                 </div>
             </header>

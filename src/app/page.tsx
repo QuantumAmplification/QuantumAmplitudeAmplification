@@ -6,6 +6,7 @@ import { InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
 import { ArrowRight, Search, Target, CheckCircle2 } from "lucide-react";
 import { GlossaryTerm } from "@/components/GlossaryTerm";
+import { DetailedSurveyLink } from "@/components/DetailedSurveyLink";
 
 export default function Home() {
   return (
@@ -17,9 +18,7 @@ export default function Home() {
           <h2 className="text-xs uppercase tracking-[0.2em] opacity-40 mt-1">from First Principles</h2>
         </div>
         <div className="flex items-center gap-6">
-          <Link href="#" className="hidden md:flex text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity font-semibold border border-foreground/10 px-4 py-2 rounded-full hover:bg-foreground/5">
-            Read Detailed Survey
-          </Link>
+          <DetailedSurveyLink />
           <ThemeToggle />
         </div>
       </header>
