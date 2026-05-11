@@ -171,10 +171,10 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="w-full py-16 text-center text-[10px] uppercase tracking-[0.3em] font-light border-t border-foreground/5">
-        <p className="opacity-40 mb-6">© 2026 Quantum Amplitude Amplification Survey Project</p>
-        <div className="opacity-50 space-y-2">
+        <p className="opacity-40 mb-6 max-w-4xl mx-auto px-6 leading-relaxed">© 2026 Quantum Amplitude Amplification Survey Project</p>
+        <div className="opacity-50 space-y-2 max-w-4xl mx-auto px-6">
           <p className="font-semibold">Authors</p>
-          <p className="flex flex-wrap justify-center gap-2 items-center">
+          <p className="flex flex-wrap justify-center gap-x-4 gap-y-2 items-center text-center">
             <a
               href="mailto:mithilesh.kumar@krea.edu.in"
               target="_self"
